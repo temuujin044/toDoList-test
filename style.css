@@ -1,0 +1,298 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+div {
+  display: block;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+
+  background-image: url(https://img.freepik.com/free-vector/vibrant-summer-ombre-background-vector_53876-105765.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  padding: 100px 16px 0;
+  margin: auto;
+  max-width: 1100px;
+  height: 100vh;
+}
+.logo {
+  position: fixed;
+  left: 30px;
+  top: 30px;
+}
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin: 32px 0;
+}
+.header h2 {
+  font-size: 36px;
+}
+.header i {
+  font-size: 24px;
+  cursor: pointer;
+}
+.addBoard {
+  /* border: 1px solid; */
+  border-radius: 5px;
+  padding: 5px;
+  /* font-size: 50px; */
+  letter-spacing: 2px;
+  font-family: "Roboto", sans-serif !important;
+  /* background-color: #ebecf0; */
+}
+.addBoard:hover {
+  background-color: #ebecf0;
+}
+.addBoard p {
+  font-size: 50px;
+}
+.card {
+  display: flex;
+  padding: 8px;
+  border-radius: 4px;
+  background-color: white;
+  width: 100%;
+  gap: 12px;
+}
+
+.todoClass {
+  display: flex;
+  padding: 8px;
+  border-radius: 4px;
+  background-color: white;
+  width: 100%;
+  gap: 12px;
+}
+
+.inProgClass {
+  display: flex;
+  padding: 8px;
+  border-radius: 4px;
+  background-color: white;
+  width: 100%;
+  gap: 12px;
+}
+
+.stuckClass {
+  display: flex;
+  padding: 8px;
+  border-radius: 4px;
+  background-color: white;
+  width: 100%;
+  gap: 12px;
+}
+
+.doneClass {
+  display: flex;
+  padding: 8px;
+  border-radius: 4px;
+  background-color: white;
+  width: 100%;
+  gap: 12px;
+}
+
+.board {
+  background-color: #ebecf0;
+  border-radius: 8px;
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  position: relative;
+  overflow: hidden;
+  width: 250px;
+  /* height: fit-content; */
+  /* justify-content: center; */
+  /* flex-basis: 0; */
+}
+
+.boards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 16px;
+  /* padding: 120px; */
+  /* border: 2px solid; */
+}
+
+.board-header {
+  padding: 8px;
+  font-size: 20px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+.titleIcons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.btn {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  padding: 8px;
+  cursor: pointer;
+}
+
+.backdrop {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  width: 100vw;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  /* visibility: hidden; */
+  z-index: 999;
+}
+
+.away {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.addtask {
+  position: absolute;
+  background-color: white;
+  border-radius: 8px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 400px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+form div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+input {
+  width: 100%;
+  padding: 8px;
+  border-radius: 4px;
+}
+
+textarea {
+  width: 100%;
+  padding: 8px;
+  border-radius: 4px;
+  resize: none;
+  height: 100px;
+}
+
+select {
+  width: 100%;
+  padding: 8px;
+  border-radius: 4px;
+}
+
+.helperText {
+  display: none;
+  color: red;
+  font-size: 12px;
+  padding: 4px 12px;
+}
+
+button {
+  padding: 8px;
+  border-radius: 4px;
+  border: none;
+  background-color: #000;
+  color: white;
+  cursor: pointer;
+  margin-top: 24px;
+}
+
+.error + .helperText {
+  display: block !important;
+}
+
+.details {
+  /* padding: 8px; */
+  border-radius: 4px;
+  background-color: white;
+  cursor: grab;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.done {
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 10px;
+}
+.done:hover {
+  background-color: #ebecf0;
+}
+.details {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.card-details {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.detail-priority {
+  border: 1px solid;
+  border-radius: 5px;
+  padding: 5px;
+  display: inline-block;
+  font-size: 14px;
+}
+.addedPriority {
+  width: fit-content;
+  padding: 4px 8px;
+  border-radius: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  font-size: 12px;
+}
+
+.actions {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.count {
+  color: rgba(0, 0, 0, 0.5);
+}
